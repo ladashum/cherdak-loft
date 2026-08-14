@@ -1,0 +1,29 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 240, 233, 0.96);
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  animation: fadeIn 0.2s ease;
+}
+
+.mobile-menu a {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--text);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  font-size: 26px;
+  color: var(--text-soft);
+}

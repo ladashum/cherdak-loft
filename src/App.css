@@ -1,0 +1,97 @@
+/* Global layout helpers used across components */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 40px; }
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 34px;
+    margin-bottom: 36px;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  height: 46px;
+  padding: 0 26px;
+  background: var(--green-btn);
+  border: 1px solid rgba(156, 179, 166, 0.45);
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  color: #4A6356;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #a8c4b0;
+  transform: translateY(-1px);
+}
+
+.btn-primary.small {
+  min-width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.btn-send {
+  height: 44px;
+  border-radius: 40px;
+  background: var(--green-btn);
+  border: 1px solid rgba(156, 179, 166, 0.45);
+  font-size: 14px;
+  color: #4A6356;
+  transition: background 0.2s;
+}
+
+.btn-send:hover {
+  background: #a8c4b0;
+}
+
+/* Shared modal overlay + animation */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

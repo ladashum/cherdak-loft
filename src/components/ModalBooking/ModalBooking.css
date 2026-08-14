@@ -1,0 +1,78 @@
+.modal {
+  background: rgba(247, 240, 233, 0.72);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 36px 28px 32px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  animation: scaleIn 0.22s ease;
+}
+
+.modal h2 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal p {
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-soft);
+  line-height: 1.45;
+}
+
+.modal-input {
+  width: 100%;
+  max-width: 250px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  font-family: var(--font-sans);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.modal-input::placeholder {
+  color: var(--muted);
+}
+
+.modal .btn-send {
+  width: 170px;
+  background: rgba(184, 207, 192, 0.85);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,0.8);
+}
