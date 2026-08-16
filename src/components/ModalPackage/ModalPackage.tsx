@@ -1,5 +1,6 @@
 import type { Package } from '../../data'
 import './ModalPackage.css'
+import { createPortal } from 'react-dom'
 
 type Props = {
   pkg: Package
