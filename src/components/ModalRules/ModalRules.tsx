@@ -32,7 +32,7 @@ const RULES = [
 ]
 
 export default function ModalRules({ onClose }: Props) {
-  return (
+  return createPortal (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-rules" onClick={(e) => e.stopPropagation()}>
         <button className="modal-rules-close" onClick={onClose} type="button" aria-label="Закрыть">
