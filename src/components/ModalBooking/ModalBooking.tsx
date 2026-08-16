@@ -1,5 +1,4 @@
 import './ModalBooking.css'
-import { createPortal } from 'react-dom'
 import { FormEvent, useState } from 'react'
 
 type Props = {
@@ -19,7 +18,7 @@ export default function ModalBooking({ onClose }: Props) {
     setTimeout(onClose, 2000)
   }
 
-  return createPortal (
+  return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} type="button">×</button>
