@@ -1,6 +1,5 @@
 import type { Package } from '../../data'
 import './ModalPackage.css'
-import { createPortal } from 'react-dom'
 
 type Props = {
   pkg: Package
@@ -45,7 +44,7 @@ function PackageIcon({ type }: { type: Package['icon'] }) {
 }
 
 export default function ModalPackage({ pkg, onClose }: Props) {
-  return createPortal (
+  return (
     <div className="modal-overlay" onClick={onClose}>
       <div
         className={`modal-package theme-${pkg.theme}`}
