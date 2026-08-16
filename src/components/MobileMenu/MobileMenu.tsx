@@ -1,5 +1,5 @@
 import './MobileMenu.css'
-import { createPortal } from 'react-dom'
+
 type Props = {
   onClose: () => void
   onScrollTo: (section: 'space' | 'parties' | 'contacts') => void
