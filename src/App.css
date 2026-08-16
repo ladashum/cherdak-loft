@@ -6,20 +6,6 @@
   padding: 0 20px;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: transparent;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  animation: fadeIn 0.2s ease;
-}
-
 @media (min-width: 768px) {
   .container { padding: 0 40px; }
 }
@@ -85,19 +71,20 @@
   background: #a8c4b0;
 }
 
-/* Shared modal overlay + animation */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: transparent;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  animation: fadeIn 0.2s ease;
+  background: rgba(247, 240, 233, 0.2);
+}
+
+body.modal-open #root {
+  filter: blur(10px);
+  transition: filter 0.2s ease;
 }
 
 @keyframes fadeIn {
