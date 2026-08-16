@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { SPACE_PHOTOS, type Package, type ModalType } from './data'
 import Header from './components/Header/Header'
 import MobileMenu from './components/MobileMenu/MobileMenu'
@@ -38,6 +38,15 @@ function App() {
     setModal(null)
     setSelectedPackage(null)
   }
+
+  useEffect(() => {
+  if (modal) {
+    document.body.classList.add('modal-open')
+  } else {
+    document.body.classList.remove('modal-open')
+  }
+  return () => document.body.classList.remove('modal-open')
+}, [modal])
 
   const nextPhoto = () => setPhotoIndex((i) => (i + 1) % SPACE_PHOTOS.length)
 
