@@ -19,7 +19,7 @@ export default function ModalBooking({ onClose }: Props) {
     setTimeout(onClose, 2000)
   }
 
-  return (
+  return createPortal (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} type="button">×</button>
