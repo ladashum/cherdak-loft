@@ -1,4 +1,5 @@
 import './ModalRules.css'
+import { createPortal } from 'react-dom'
 type Props = {
   onClose: () => void
 }
