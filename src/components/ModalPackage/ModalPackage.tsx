@@ -45,7 +45,7 @@ function PackageIcon({ type }: { type: Package['icon'] }) {
 }
 
 export default function ModalPackage({ pkg, onClose }: Props) {
-  return (
+  return createPortal (
     <div className="modal-overlay" onClick={onClose}>
       <div
         className={`modal-package theme-${pkg.theme}`}
